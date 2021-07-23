@@ -12,6 +12,7 @@ public class Nota {
     //1) Atributos --> Variables
     private String nombre; //esta variable solo es accesible a traves de  Nota(la entidad)
     private int escala100;
+    private int codigo;
     private double escala5;
     private String cualitativo;
 
@@ -23,6 +24,37 @@ public class Nota {
         this.escala100 = 0;
         this.escala5 = 0;
         this.cualitativo = "";
+    }
+
+    Nota(String pNombre){ //debe llamarse igual que la clase
+        this.nombre = pNombre; 
+        this.escala100 = 0;
+        this.escala5 = 0;
+        this.cualitativo = "";
+    }
+    //alternativa diferenciando firma
+    Nota(int pCodigo, boolean cargaPorCodigo){ 
+        this.nombre = "Sin Nombre";
+        this.codigo = pCodigo;
+        this.escala100 = 0;
+        this.escala5 = 0;
+        this.cualitativo = "";
+    }
+    //otra alternativa
+    Nota(int a, int opcion){
+        if (opcion == 1){
+            //constrya de una forma (se refiere a la escala de 100)
+            this.nombre = "Sin Nombre";
+            this.escala100 = a;
+            this.escala5 = (double)a / 20;
+        }else{
+            //construya de otra forma
+            this.nombre = "Sin Nombre";
+            this.codigo = a;
+            this.escala100 = 0;
+            this.escala5 = 0;
+            this.cualitativo = "";
+        }
     }
 
     Nota(int pEscala100){ 
@@ -39,16 +71,35 @@ public class Nota {
         //this.cualitativo = pEscala100 >= 60 ? "Aprobado" : "Reprobado";
     }
 
-    Nota(int pEscala5){ 
-        
+    Nota(String pNombre, int pEscala5){ 
+        this.nombre = pNombre;
+        this.escala5 = pEscala5;
+        if(pEscala5 >= 2.95){
+            this.cualitativo = "Apobado";
+        }else{
+            this.cualitativo = "Reprobado";
+        }
+        this.escala100 = (int)(pEscala5 * 20);
     }
 
-    Nota(int pCualitativo){ 
-        
+   
+
+    Nota(int pEscala100, String pNombre, double pEscala5, String pCualitativo){ 
+        this.nombre = pNombre;
+        this.escala100 = pEscala100;
+        this.escala5 = pEscala5;
+        this.cualitativo = pCualitativo;
     }
 
-    Nota(int pEscala100, int pNombre, double pEscala5, String pCualitativo){ 
-        
+    //2b) Métodos que definen el comportamiento particular de la nota
+        //alcance retorno nombre(parametros)
+    public void mostrarNota(){
+        System.out.println("----InfoNota----");
+        System.out.println("Codigo -->"+this.codigo);
+        System.out.println("Nombre -->"+this.nombre);
+        System.out.println("Escala100 --> "+this.escala100);
+        System.out.println("Escala5 --> "+this.escala5);
+        System.out.println("Cualitativo --> "+this.cualitativo);
     }
 
 }
