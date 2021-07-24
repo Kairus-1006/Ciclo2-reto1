@@ -71,7 +71,7 @@ public class Nota {
         //this.cualitativo = pEscala100 >= 60 ? "Aprobado" : "Reprobado";
     }
 
-    Nota(String pNombre, int pEscala5){ 
+    Nota(String pNombre, double pEscala5){ 
         this.nombre = pNombre;
         this.escala5 = pEscala5;
         if(pEscala5 >= 2.95){

@@ -25,5 +25,19 @@ public class App
         //ejemplo constructor con codigo
         Nota notaEjemploFirmas = new Nota(34688, true);
         notaEjemploFirmas.mostrarNota();
+
+        //ejemplo constructor con codigo utilizando opcion
+        Nota notaEmpleandoOpcion = new Nota(45678, 0);
+        notaEmpleandoOpcion.mostrarNota();
+
+        //ejemplo constructor nota en escala de100  utilizando opcion
+        Nota notaOpcion100 = new Nota(44, 1);
+        notaOpcion100.mostrarNota();
+
+
+        //Ejercicio propusto de otro estudiante
+        double calificacionPedro = 4;
+        Nota notaPedro = new Nota("Taller Pedro", calificacionPedro);
+        notaPedro.mostrarNota();
     }
 }
