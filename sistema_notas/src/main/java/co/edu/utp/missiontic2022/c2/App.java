@@ -39,5 +39,11 @@ public class App
         double calificacionPedro = 4;
         Nota notaPedro = new Nota("Taller Pedro", calificacionPedro);
         notaPedro.mostrarNota();
+        
+        System.out.println("Solomante el contenido del atributo escala100: "+notaPedro.getEscala100());
+
+        //Actualizar el nombre de una nota que ya esta creada
+        notaOpcion100.setNombre("Nombre Actualizado Nota100");
+        notaOpcion100.mostrarNota();
     }
 }
