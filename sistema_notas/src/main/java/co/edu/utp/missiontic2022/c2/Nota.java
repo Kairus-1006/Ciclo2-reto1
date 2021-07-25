@@ -80,6 +80,7 @@ public class Nota {
             this.cualitativo = "Reprobado";
         }
         this.escala100 = (int)(pEscala5 * 20);
+        
     }
 
    

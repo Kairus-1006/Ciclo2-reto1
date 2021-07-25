@@ -8,7 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        //Probar nuestra clase Nota
+        /* //Probar nuestra clase Nota
         Nota nota1 = new Nota("Taller 2");
 
         //Observar el contenido
@@ -44,6 +44,15 @@ public class App
 
         //Actualizar el nombre de una nota que ya esta creada
         notaOpcion100.setNombre("Nombre Actualizado Nota100");
-        notaOpcion100.mostrarNota();
+        notaOpcion100.mostrarNota(); */
+
+        //probar la clase materia(orientado al requerimiento)
+        Materia materia = new Materia("FundamentosProg",40,50,39,76,96);
+        materia.mostrarMateria();
+
+        //utilizr el comportamiento de materia para alcanzar el objetivo
+        materia.obtenerPeorNota();
+        materia.calcularPromedioAjustado();
+        materia.reportarPromedioAjustado();
     }
 }
