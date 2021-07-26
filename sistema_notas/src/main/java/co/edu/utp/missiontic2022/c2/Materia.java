@@ -40,7 +40,7 @@ public class Materia {
     //Metodos generales
     public void mostrarMateria(){
 
-        System.out.println("**************Materia: "+this.nombre);
+        System.out.println("**************Materia: "+this.nombre+"****************");
         this.nota1.mostrarNota();
         this.nota2.mostrarNota();
         this.nota3.mostrarNota();
@@ -75,7 +75,7 @@ public class Materia {
         this.obtenerPeorNota();
 
         //calculo promedio ajustado
-        this.promedioAjustado = (nota1.getEscala5() + nota2.getEscala5() + nota3.getEscala5() + nota4.getEscala5() + nota5.getEscala5() - peorNota) / 4;
+        this.promedioAjustado = (nota1.getEscala5()+nota2.getEscala5()+nota3.getEscala5()+nota4.getEscala5()+nota5.getEscala5()-peorNota.getEscala5())/4;
     }
 
     public void reportarPromedioAjustado(){

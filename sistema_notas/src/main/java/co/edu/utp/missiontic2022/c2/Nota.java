@@ -76,10 +76,12 @@ public class Nota {
         this.escala5 = pEscala5;
         if(pEscala5 >= 2.95){
             this.cualitativo = "Apobado";
+           
         }else{
             this.cualitativo = "Reprobado";
         }
         this.escala100 = (int)(pEscala5 * 20);
+        
         
     }
 
