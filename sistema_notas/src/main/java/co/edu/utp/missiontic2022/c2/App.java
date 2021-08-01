@@ -1,5 +1,7 @@
 package co.edu.utp.missiontic2022.c2;
 
+
+
 /**
  * Sistema de Notas
  *
@@ -56,5 +58,18 @@ public class App
         materia.calcularPromedioAjustado();
         materia.reportarPromedioAjustado(); 
 
+        //Mostrar la materia despues del proceso
+        //System.out.println("PROMEDIO AJUSTADO: "+Math.round(materia.getPromedioAjustado())); USO DEL GETTER
+        
+        //mostrar modificacion de nombre de notas
+        materia.asignarNombreNotas("biologia", "matematicas", "programacion", "uml", "diseno");
+        materia.mostrarMateria();
+        
+
+        //modificar la quinta nota de la materia
+        Nota nuevaNota5 = new Nota(10);
+        materia.setNota5(nuevaNota5);
+        materia.mostrarMateria();
+        
     }
 }

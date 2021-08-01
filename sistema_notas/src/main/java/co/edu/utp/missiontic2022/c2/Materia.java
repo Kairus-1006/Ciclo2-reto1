@@ -46,6 +46,8 @@ public class Materia {
         this.nota3.mostrarNota();
         this.nota4.mostrarNota();
         this.nota5.mostrarNota();
+        System.out.println("*************Peor Nota************");
+        this.peorNota.mostrarNota();
         System.out.println("Promedio Ajustado: "+this.promedioAjustado);
 
     }
@@ -84,6 +86,15 @@ public class Materia {
 
     }
 
+    public void asignarNombreNotas(String nom1,String nom2, String nom3,String nom4, String nom5){
+        nota1.setNombre(nom1);
+        nota2.setNombre(nom2);
+        nota3.setNombre(nom3);
+        nota4.setNombre(nom4);
+        nota5.setNombre(nom5);
+
+    }
+
     //getters
     public Nota getPeorNota() {
         return peorNota;
@@ -98,6 +109,10 @@ public class Materia {
     //setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public void setNota5(Nota nota5){
+        this.nota5 = nota5;
     }
 
     
